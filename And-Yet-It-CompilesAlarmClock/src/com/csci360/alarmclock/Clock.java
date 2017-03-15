@@ -7,7 +7,7 @@ package com.csci360.alarmclock;
 
 /**
  *
- * @author Mikaila Johnson
+ * @author Nicholas Johnson
  */
 public class Clock {
     
