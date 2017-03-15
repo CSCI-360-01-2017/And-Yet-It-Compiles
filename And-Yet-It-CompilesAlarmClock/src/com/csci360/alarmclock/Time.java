@@ -5,7 +5,6 @@
  */
 package com.csci360.alarmclock;
 import java.util.Date;
-import java.util.GregorianCalendar; 
 /**
  *
  * @author Nicholas Johnson
@@ -16,7 +15,12 @@ public class Time {
     private int seconds;
     
     public void setHours(int newHours){
+       if(newHours >= 61 || newHours < 0){
+           System.out.println("Incorrect Hours");
+       }
+       else{
         hours = newHours;
+    }
     }
     
     public void setMinutes(int newMinutes){
@@ -38,13 +42,16 @@ public class Time {
     public int getSeconds(){
         return seconds; // skeleton
     }
-    public Date getTime(){
-        GregorianCalendar time = new GregorianCalendar();
+    public void updateTime(){
         
-        Date ret = new Date();
-        ret = time.getTime();
+       Date date = new Date();
+       setHours(date.getHours());
+       setMinutes(date.getMinutes());
+       setSeconds(date.getSeconds());
+
         
-      return ret;  
+        
+      
     }
 
 

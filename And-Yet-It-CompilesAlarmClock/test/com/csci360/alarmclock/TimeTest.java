@@ -11,7 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+import java.util.Date;
 /**
  *
  * @author Josh Jettie
@@ -37,7 +37,13 @@ public class TimeTest {
     public void tearDown() {
     }
 
-    
+    @Test
+    public void testUpdateTime() {
+        System.out.println("Test UpdateTime");
+        Time instance = new Time();
+        instance.updateTime();
+    } 
+
     /**
      * Test of getHours method, of class Time.
      */
@@ -45,7 +51,9 @@ public class TimeTest {
     public void testGetHours() {
         System.out.println("getHours");
         Time instance = new Time();
-        int expResult = 0;
+        Date comp = new Date();
+        instance.updateTime();
+        int expResult = comp.getHours();
         int result = instance.getHours();
         assertEquals(expResult, result);
     }
@@ -57,7 +65,9 @@ public class TimeTest {
     public void testGetMinutes() {
         System.out.println("getMinutes");
         Time instance = new Time();
-        int expResult = 0;
+        Date comp = new Date();
+        instance.updateTime();
+        int expResult = comp.getMinutes();
         int result = instance.getMinutes();
         assertEquals(expResult, result);
     }
@@ -69,7 +79,9 @@ public class TimeTest {
     public void testGetSeconds() {
         System.out.println("getSeconds");
         Time instance = new Time();
-        int expResult = 0;
+        Date comp = new Date();
+        instance.updateTime();
+        int expResult = comp.getSeconds();
         int result = instance.getSeconds();
         assertEquals(expResult, result);
     }
@@ -79,9 +91,18 @@ public class TimeTest {
     @Test
     public void testSetHours() {
         System.out.println("setHours");
-        int newHours = 0;
+        int newHours = 13;
         Time instance = new Time();
         instance.setHours(newHours);
+        assertEquals(instance.getHours(), newHours);
+    }
+        @Test
+    public void testSetIncorrectHours() {
+        System.out.println("SetIncorrectHours");
+        int newHours = 90;
+        Time instance = new Time();
+        instance.setHours(newHours);
+        assertEquals(instance.getHours(), newHours);
     }
 
     /**
@@ -90,9 +111,10 @@ public class TimeTest {
     @Test
     public void testSetMinutes() {
         System.out.println("setMinutes");
-        int newMinutes = 0;
+        int newMinutes = 13;
         Time instance = new Time();
         instance.setMinutes(newMinutes);
+        assertEquals(instance.getMinutes(), newMinutes);
     }
 
     /**
@@ -101,15 +123,10 @@ public class TimeTest {
     @Test
     public void testSetSeconds() {
         System.out.println("setSeconds");
-        int newSeconds = 0;
+        int newSeconds = 13;
         Time instance = new Time();
         instance.setSeconds(newSeconds);
-    } 
-    @Test
-    public void testgetTime() {
-        System.out.println("Test getTime");
-        Time instance = new Time();
-        System.out.println(instance.getTime());
+        assertEquals(instance.getSeconds(), newSeconds);
     } 
 
 }
