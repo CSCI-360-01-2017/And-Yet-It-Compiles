@@ -43,11 +43,11 @@ public class AlarmSystemTest {
     @Test
     public void testSetVolume() {
         System.out.println("setVolume");
-        int newVolume = 0;
+        int newVolume = 10;
         AlarmSystem instance = new AlarmSystem();
         instance.setVolume(newVolume);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(newVolume, 10);
+        
     }
 
     /**
@@ -60,8 +60,6 @@ public class AlarmSystemTest {
         int expResult = 0;
         int result = instance.getVolume();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -75,8 +73,6 @@ public class AlarmSystemTest {
         int secs = 0;
         AlarmSystem instance = new AlarmSystem();
         instance.setAlarm1(hours, mins, secs);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -90,8 +86,6 @@ public class AlarmSystemTest {
         int secs = 0;
         AlarmSystem instance = new AlarmSystem();
         instance.setAlarm2(hours, mins, secs);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -102,8 +96,6 @@ public class AlarmSystemTest {
         System.out.println("soundAlarm");
         AlarmSystem instance = new AlarmSystem();
         instance.soundAlarm();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -114,8 +106,6 @@ public class AlarmSystemTest {
         System.out.println("killAlarm");
         AlarmSystem instance = new AlarmSystem();
         instance.killAlarm();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -126,8 +116,6 @@ public class AlarmSystemTest {
         System.out.println("start");
         AlarmSystem instance = new AlarmSystem();
         instance.start();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
