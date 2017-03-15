@@ -9,7 +9,7 @@ package com.csci360.alarmclock;
  *
  * @author Nicholas Johnson
  */
-public class System {
+public class AlarmSystem {
     
     private Alarm alarmOne = new Alarm();
     private Alarm alarmTwo = new Alarm();

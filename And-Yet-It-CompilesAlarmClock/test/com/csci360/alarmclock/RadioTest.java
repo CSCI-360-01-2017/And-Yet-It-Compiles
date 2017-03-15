@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Mikaila Johnson
+ * @author Nicholas Johnson
  */
 public class RadioTest {
     
@@ -46,8 +46,6 @@ public class RadioTest {
         float newStation = 0.0F;
         Radio instance = new Radio();
         instance.setStation(newStation);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
