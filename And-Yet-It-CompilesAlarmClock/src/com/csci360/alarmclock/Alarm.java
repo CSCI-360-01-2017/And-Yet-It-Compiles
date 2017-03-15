@@ -27,6 +27,15 @@ public class Alarm {
      time2Sound.setMinutes(minutes);
      time2Sound.setSeconds(seconds);
  }
+ public int getAlarmHours(){
+     return time2Sound.getHours();
+ }
+ public int getAlarmMinutes(){
+     return time2Sound.getMinutes();
+ }
+ public int getAlarmSeconds(){
+     return time2Sound.getSeconds();
+ } 
  public void snooze(){
      int oldMins = time2Sound.getMinutes();
      int newMins = oldMins + 5;

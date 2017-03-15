@@ -102,7 +102,7 @@ public class TimeTest {
         int newHours = 90;
         Time instance = new Time();
         instance.setHours(newHours);
-        assertEquals(instance.getHours(), newHours);
+        assertEquals("Incorrect Hours", newHours);
     }
 
     /**
@@ -130,3 +130,4 @@ public class TimeTest {
     } 
 
 }
+
