@@ -10,9 +10,9 @@ package com.csci360.alarmclock;
  * @author Nicholas Johnson
  */
 public class Time {
-    int hours;
-    int minutes;
-    int seconds;
+    private int hours;
+    private int minutes;
+    private int seconds;
     
     public void setHours(int newHours){
         hours = newHours;
@@ -26,15 +26,15 @@ public class Time {
         seconds = newSeconds;
     }
     
-    public static int getHours(){
-        return 1; // skeleton
+    public int getHours(){
+        return hours; // skeleton
     }
     
-    public static int getMinutes(){
-        return 1; // skeleton
+    public int getMinutes(){
+        return minutes; // skeleton
     }
     
-    public static int getSeconds(){
-        return 1; // skeleton
+    public int getSeconds(){
+        return seconds; // skeleton
     }
 }
