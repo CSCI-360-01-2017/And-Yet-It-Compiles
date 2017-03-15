@@ -10,5 +10,8 @@ package com.csci360.alarmclock;
  * @author Nicholas Johnson
  */
 public class Clock {
+    private Time time = new Time();
+    private boolean mode; // True = 12 hour clock False = 24 hour clock.
+    
     
 }
