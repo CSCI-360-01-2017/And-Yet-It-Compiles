@@ -104,5 +104,12 @@ public class TimeTest {
         int newSeconds = 0;
         Time instance = new Time();
         instance.setSeconds(newSeconds);
-    }    
+    } 
+    @Test
+    public void testgetTime() {
+        System.out.println("Test getTime");
+        Time instance = new Time();
+        System.out.println(instance.getTime());
+    } 
+
 }

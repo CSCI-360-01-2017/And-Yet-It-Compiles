@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package com.csci360.alarmclock;
-
+import java.util.Date;
+import java.util.GregorianCalendar; 
 /**
  *
  * @author Nicholas Johnson
@@ -37,4 +38,19 @@ public class Time {
     public int getSeconds(){
         return seconds; // skeleton
     }
+    public Date getTime(){
+        GregorianCalendar time = new GregorianCalendar();
+        
+        Date ret = new Date();
+        ret = time.getTime();
+        
+      return ret;  
+    }
+
+
+
+    
+    
+    
+    
 }
