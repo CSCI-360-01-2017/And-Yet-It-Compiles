@@ -16,7 +16,7 @@ public class Time {
     
     public void setHours(int newHours){
        if(newHours >= 61 || newHours < 0){
-           System.out.println("Incorrect Hours");
+           //System.out.println("Incorrect Hours");
        }
        else{
         hours = newHours;
