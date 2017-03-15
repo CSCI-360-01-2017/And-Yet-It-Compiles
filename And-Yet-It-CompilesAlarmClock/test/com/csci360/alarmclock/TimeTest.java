@@ -37,45 +37,7 @@ public class TimeTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of setHours method, of class Time.
-     */
-    @Test
-    public void testSetHours() {
-        System.out.println("setHours");
-        int newHours = 0;
-        Time instance = new Time();
-        instance.setHours(newHours);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setMinutes method, of class Time.
-     */
-    @Test
-    public void testSetMinutes() {
-        System.out.println("setMinutes");
-        int newMinutes = 0;
-        Time instance = new Time();
-        instance.setMinutes(newMinutes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setSeconds method, of class Time.
-     */
-    @Test
-    public void testSetSeconds() {
-        System.out.println("setSeconds");
-        int newSeconds = 0;
-        Time instance = new Time();
-        instance.setSeconds(newSeconds);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
     /**
      * Test of getHours method, of class Time.
      */
@@ -86,8 +48,6 @@ public class TimeTest {
         int expResult = 0;
         int result = instance.getHours();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -100,8 +60,6 @@ public class TimeTest {
         int expResult = 0;
         int result = instance.getMinutes();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -114,8 +72,37 @@ public class TimeTest {
         int expResult = 0;
         int result = instance.getSeconds();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
-    
+    /**
+     * Test of setHours method, of class Time.
+     */
+    @Test
+    public void testSetHours() {
+        System.out.println("setHours");
+        int newHours = 0;
+        Time instance = new Time();
+        instance.setHours(newHours);
+    }
+
+    /**
+     * Test of setMinutes method, of class Time.
+     */
+    @Test
+    public void testSetMinutes() {
+        System.out.println("setMinutes");
+        int newMinutes = 0;
+        Time instance = new Time();
+        instance.setMinutes(newMinutes);
+    }
+
+    /**
+     * Test of setSeconds method, of class Time.
+     */
+    @Test
+    public void testSetSeconds() {
+        System.out.println("setSeconds");
+        int newSeconds = 0;
+        Time instance = new Time();
+        instance.setSeconds(newSeconds);
+    }    
 }
