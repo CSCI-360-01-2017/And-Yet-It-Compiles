@@ -18,7 +18,7 @@ public class Radio {
     public void setStation(float newStation){
         station = newStation;
     }
-    
+    // Add station boundries
     public void setMode(boolean newMode){
         mode = newMode;
     }
