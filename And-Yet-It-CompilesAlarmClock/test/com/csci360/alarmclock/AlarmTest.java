@@ -48,12 +48,12 @@ public class AlarmTest {
         System.out.println("alarm");
         Date time = new Date();
         System.out.println("Start time:" + time);
-        time.setSeconds(time.getSeconds() + 30);
-        boolean mode = true;
+        time.setSeconds(time.getSeconds() + 5);
+        boolean mode = false;
         Alarm instance = new Alarm(mode,time);
         try {
             //assuming it takes 30 secs to complete the task
-            Thread.sleep(30*1000);
+            Thread.sleep(5*1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
