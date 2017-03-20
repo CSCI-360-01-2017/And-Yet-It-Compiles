@@ -13,7 +13,7 @@ import java.util.*;
 public class Alarm {
  private Timer alarm;
  private SoundAlarm soundAlarm;
- private boolean mode = false; // False means radio and True means Buzz
+ private boolean mode; // False means radio and True means Buzz
  
     /**
      * Constructor takes the mode (true = buzz, false = radio) and the time
@@ -21,8 +21,8 @@ public class Alarm {
      */
     Alarm(boolean setMode, Date time){
         alarm = new Timer();
-        soundAlarm = new SoundAlarm();
         mode = setMode;
+        soundAlarm = new SoundAlarm(setMode);
         alarm.schedule(soundAlarm, time);
     }
  
