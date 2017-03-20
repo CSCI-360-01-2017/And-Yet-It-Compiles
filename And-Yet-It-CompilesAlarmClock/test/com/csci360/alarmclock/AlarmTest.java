@@ -11,10 +11,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.*;
 
 /**
  *
- * @author joshjettie
+ * @author Nicholas Johnson and joshjettie
  */
 public class AlarmTest {
     
@@ -37,60 +38,34 @@ public class AlarmTest {
     public void tearDown() {
     }
 
+    
+    
     /**
-     * Test of setMode method, of class Alarm.
-     */
+    * test alarm
+    */
     @Test
-    public void testSetMode() {
-        System.out.println("setMode");
-        boolean newMode = true;
-        Alarm instance = new Alarm();
-        instance.setMode(newMode);
-        assertEquals(instance.getMode() , true );
-        
+    public void testAlarm() {
+        System.out.println("alarm");
+        Date time = new Date();
+        System.out.println("Start time:" + time);
+        time.setSeconds(time.getSeconds() + 30);
+        boolean mode = true;
+        Alarm instance = new Alarm(mode,time);
+        try {
+            //assuming it takes 30 secs to complete the task
+            Thread.sleep(30*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+       
     }
-
-    /**
-     * Test of getMode method, of class Alarm.
-     */
-    @Test
-    public void testGetMode() {
-        System.out.println("getMode");
-        Alarm instance = new Alarm();
-        boolean expResult = false;
-        boolean result = instance.getMode();
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
-     * Test of setAlarm method, of class Alarm.
-     */
-    @Test
-    public void testSetAlarm() {
-        System.out.println("setAlarm");
-        int hours = 10;
-        int minutes = 33;
-        int seconds = 15;
-        Alarm instance = new Alarm();
-        instance.setAlarm(hours, minutes, seconds);
-        assertEquals(instance.getAlarmHours(), 10);
-        assertEquals(instance.getAlarmMinutes(), 33);
-        assertEquals(instance.getAlarmSeconds(), 15);
-    }
-
-    /**
-     * Test of snooze method, of class Alarm.
-     */
+    
+   /**
+    * test the snooze method.
+    */
     @Test
     public void testSnooze() {
-        System.out.println("snooze");
-        Alarm instance = new Alarm();
-        instance.setAlarm(05, 55, 00);
-        instance.snooze();
-        assertEquals(instance.getAlarmMinutes(), 00 );
-        assertEquals(instance.getAlarmHours(), 06 );
-        
+        System.out.println("snooze");        
        
     }
     
