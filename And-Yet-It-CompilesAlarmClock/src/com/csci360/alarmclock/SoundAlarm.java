@@ -26,9 +26,6 @@ public class SoundAlarm extends TimerTask{
     
     @Override
     public void run() {
-<<<<<<< HEAD
-        System.out.println("Buzz at:" +new Date());
-=======
         if (this.mode){
             System.out.println("Buzz at:"+new Date());
         }else{
@@ -48,6 +45,5 @@ public class SoundAlarm extends TimerTask{
      */
     public void setMode(boolean mode) {
         this.mode = mode;
->>>>>>> 343f53c5a47c23de9c1d8104a90e752c804a9815
     }
 }
