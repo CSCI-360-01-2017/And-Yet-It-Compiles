@@ -5,16 +5,18 @@
  */
 package com.csci360.alarmclock;
 
+import java.sql.Date;
+
 /**
  *
  * @author Nicholas Johnson
  */
 public class AlarmSystem {
     
-    private Alarm alarmOne = new Alarm();
-    private Alarm alarmTwo = new Alarm();
+    private Alarm alarmOne;
+    private Alarm alarmTwo;
     private Radio radio = new Radio();
-    //TODO add clock?
+    private Clock clock = new Clock();
     private int volume;
     
     public void setVolume(int newVolume){
@@ -25,17 +27,19 @@ public class AlarmSystem {
         return volume;
     }
     
-    public void setAlarm1(int hours, int mins, int secs){
-        alarmOne.setAlarm(hours, mins, secs);
+    public void setAlarm1(boolean mode, Date time){
+        alarmOne = new Alarm(mode, time);
     }
     
-    public void setAlarm2(int hours, int mins, int secs){
-        alarmTwo.setAlarm(hours, mins, secs);
+    public void setAlarm2(boolean mode, Date time){
+        alarmTwo = new Alarm(mode, time);
     }
     
     public void changeStation(float frequency){
-        // TODO make sure that the frequency is in the correct range.
+        
+        if(frequency > 88.0 && frequency < 106.0){
         radio.setStation(frequency);
+        }
     }
     
     public void radioOnOrOff(boolean onOrOff){ // True = on False = off.
@@ -44,16 +48,5 @@ public class AlarmSystem {
         }else{
             radio.radioOff();
         }
-    }
-    public void soundAlarm(){
-        // TODO set off an alarm.
-    }
-    
-    public void killAlarm(){
-        //TODO turn off an alarm.
-    }
-    
-    public void start(){
-        //TODO connect to the GUI
     }
 }

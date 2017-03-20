@@ -8,7 +8,7 @@ import java.util.*;
 
 /**
  *
- * @author Nicholas Johnson and joshjettie
+ * @author Nicholas Johnson and Josh Jettie
  */
 public class Alarm {
  private Timer alarm;

@@ -5,15 +5,14 @@
  */
 package com.csci360.alarmclock;
 import java.util.*;
-
 /**
  *
- * @author Nicholas Johnson and Josh Jettie
+ * @author joshjettie
  */
-public class SoundAlarm extends TimerTask{
+public class UpdateTime extends TimerTask{
     
-    @Override
-    public void run() {
-        System.out.println("Buzz at:" +new Date());
+        @Override
+        public void run() {
+        System.out.println(new Date());
     }
 }

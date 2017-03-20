@@ -39,7 +39,7 @@ public class RadioTest {
     
     @Test
     public void testRadioOn() {
-        System.out.println("radioOn");
+        System.out.println("Turns the radio On");
         Radio instance = new Radio();
         instance.radioOn();
         assertEquals(instance.getStatus(), true);
@@ -51,7 +51,7 @@ public class RadioTest {
      */
     @Test
     public void testRadioOff() {
-        System.out.println("radioOff");
+        System.out.println("Turns the radio off");
         Radio instance = new Radio();
         instance.radioOff();
         assertEquals(instance.getStatus(), false);
