@@ -7,7 +7,7 @@ package com.csci360.alarmclock;
 import java.util.*;
 
 /**
- *
+ * This class deals with setting an alarm that will sound at the specified date.
  * @author Nicholas Johnson and Josh Jettie
  */
 public class Alarm {
@@ -26,14 +26,12 @@ public class Alarm {
         alarm.schedule(soundAlarm, time);
     }
  
-    
- public void setMode(boolean newMode){
-     mode = newMode;
- }   
- public boolean getMode(){
-     return mode;
- }
-
-     
+    // These aren't used so we might trash them.
+     public void setMode(boolean newMode){
+         mode = newMode;
+    }   
+    public boolean getMode(){
+        return mode;
+    }
  }
 

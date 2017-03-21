@@ -7,7 +7,7 @@ package com.csci360.alarmclock;
 import java.util.*;
 
 /**
- *
+ * This is a timertask that is supposed to turn on the alarm.
  * @author Nicholas Johnson and Josh Jettie
  */
 public class SoundAlarm extends TimerTask{
@@ -15,14 +15,12 @@ public class SoundAlarm extends TimerTask{
     private boolean mode; // False means radio and True means Buzz
     
     /**
-     * Constructor
+     * Constructor that sets the mode
      * @param setMode 
      */
     SoundAlarm(boolean setMode){
         mode = setMode;
     }
-    
-    
     
     @Override
     public void run() {

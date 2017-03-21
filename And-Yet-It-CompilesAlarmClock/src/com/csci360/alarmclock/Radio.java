@@ -6,8 +6,8 @@
 package com.csci360.alarmclock;
 
 /**
- *
- * @author Nicholas Johnson
+ * This class allows for interaction with a radio.
+ * @author Nicholas Johnson and Josh Jettie
  */
 public class Radio {
     
@@ -18,7 +18,7 @@ public class Radio {
     public void setStation(float newStation){
         station = newStation;
     }
-    // Add station boundries
+    // ToDo: Add station boundries
     public void setMode(boolean newMode){
         mode = newMode;
     }

@@ -6,13 +6,13 @@
 package com.csci360.alarmclock;
 import java.util.*;
 /**
- *
- * @author joshjettie
+ * This is a timertask that is used to print out the current clock time.
+ * @author Josh Jettie and Nicholas Johnson
  */
 public class UpdateTime extends TimerTask{
     
         @Override
         public void run() {
-        System.out.println(new Date());
+        System.out.println(new Date()); // this will be used by the GUI
     }
 }

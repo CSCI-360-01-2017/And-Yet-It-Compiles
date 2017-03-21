@@ -6,7 +6,8 @@
 package com.csci360.alarmclock;
 import java.util.*;
 /**
- *
+ * This clock is used to keep track of time by displaying the time every second
+ * taken from the Date class, using a timer to make the updates each second.
  * @author Nicholas Johnson
  */
 public class Clock {
@@ -15,16 +16,20 @@ public class Clock {
     private boolean on = true;
     private UpdateTime updateTime;
 
-
+    /**
+     * Constructor initializes the timer the moment it is constructed.
+     */
     Clock(){
         timer = new Timer();
         updateTime = new UpdateTime();
         timer.scheduleAtFixedRate(updateTime, 0, 1000);
     }
+    
+    //TODO: add some functionality to allow for 12-hour mode.
+    
     /**
      * @return the isOn
      */
-    
     public boolean isOn() {
         return on;
     }
@@ -35,8 +40,6 @@ public class Clock {
     public void setIsOn(boolean isOn) {
         this.on = isOn;
     }
-   
-
 }
 
 

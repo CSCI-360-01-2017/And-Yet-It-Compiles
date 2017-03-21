@@ -13,8 +13,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Mikaila Johnson
+ * Tests for the alarm system class
+ * @author Nicholas Johnson and Josh Jettie
  */
 public class AlarmSystemTest {
     
