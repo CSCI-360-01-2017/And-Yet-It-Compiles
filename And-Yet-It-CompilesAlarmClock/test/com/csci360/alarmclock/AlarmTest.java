@@ -58,15 +58,5 @@ public class AlarmTest {
             e.printStackTrace();
         }
        
-    }
-    
-   /**
-    * test the snooze method.
-    */
-    @Test
-    public void testSnooze() {
-        System.out.println("snooze");        
-        // TODO: implement this function.
-    }
-    
+    }    
 }

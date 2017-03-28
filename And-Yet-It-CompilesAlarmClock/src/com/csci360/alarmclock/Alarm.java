@@ -14,6 +14,7 @@ public class Alarm {
  private Timer alarm;
  private SoundAlarm soundAlarm;
  private boolean mode; // False means radio and True means Buzz
+ private Date time2Sound;
  
     /**
      * Constructor takes the mode (true = buzz, false = radio) and the time
@@ -22,16 +23,21 @@ public class Alarm {
     Alarm(boolean setMode, Date time){
         alarm = new Timer();
         mode = setMode;
+        time2Sound = time;
         soundAlarm = new SoundAlarm(setMode);
         alarm.schedule(soundAlarm, time);
     }
  
-    // These aren't used so we might trash them.
-     public void setMode(boolean newMode){
+    // These setters aren't used so we might trash them.
+    public void setMode(boolean newMode){
          mode = newMode;
     }   
     public boolean getMode(){
         return mode;
+    }
+    
+    public Date getTime2Sound(){
+        return time2Sound;
     }
  }
 

@@ -5,13 +5,15 @@
  */
 package com.csci360.alarmclock;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  *
  * @author Nicholas Johnson
  */
 public class AlarmSystem {
+    
+    final int SNOOZE_MINS = 5;
     
     private Alarm alarmOne;
     private Alarm alarmTwo;
@@ -27,11 +29,11 @@ public class AlarmSystem {
         return volume;
     }
     
-    public void setAlarm1(boolean mode, Date time){
+    public void setAlarmOne(boolean mode, Date time){
         alarmOne = new Alarm(mode, time);
     }
     
-    public void setAlarm2(boolean mode, Date time){
+    public void setAlarmTwo(boolean mode, Date time){
         alarmTwo = new Alarm(mode, time);
     }
     
@@ -48,5 +50,20 @@ public class AlarmSystem {
         }else{
             radio.radioOff();
         }
+    }
+    
+    public Alarm getAlarmOne(){
+        return alarmOne;
+    }
+    
+    public Alarm getAlarmTwo(){
+        return alarmTwo;
+    }
+    
+    // Cancel the alarm and set it forward 5 mins.
+    public void snoozeAlarmOne(){
+        Date timeBeforeSnooze = alarmOne.getTime2Sound();
+        timeBeforeSnooze.setMinutes(timeBeforeSnooze.getMinutes() + SNOOZE_MINS);
+        alarmOne = new Alarm(alarmOne.getMode(), timeBeforeSnooze);
     }
 }

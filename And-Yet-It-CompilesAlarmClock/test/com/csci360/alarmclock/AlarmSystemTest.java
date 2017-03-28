@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import java.util.Date;
 
 /**
  * Tests for the alarm system class
@@ -38,27 +39,24 @@ public class AlarmSystemTest {
     }
 
     /**
-     * Test of setVolume method, of class System.
-     */
+    * test the snooze method.
+    
     @Test
-    public void testSetVolume() {
-        System.out.println("setVolume");
-        int newVolume = 10;
-        AlarmSystem instance = new AlarmSystem();
-        instance.setVolume(newVolume);
-        assertEquals(newVolume, 10);
-        
+    public void testSnooze() {
+        System.out.println("snooze");        
+        Date time = new Date();
+        System.out.println("Start time:" + time);
+        time.setSeconds(time.getSeconds() + 3);
+        boolean mode = false;
+        AlarmSystem system = new AlarmSystem();
+        system.setAlarmOne(mode,time);
+        system.snoozeAlarmOne();        
+        try {
+            //assuming it takes 6 secs to complete the task
+            Thread.sleep(6*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
-    /**
-     * Test of getVolume method, of class System.
-     */
-    @Test
-    public void testGetVolume() {
-        System.out.println("getVolume");
-        AlarmSystem instance = new AlarmSystem();
-        int expResult = 0;
-        int result = instance.getVolume();
-        assertEquals(expResult, result);
-    }    
+    */
 }

@@ -13,6 +13,6 @@ public class UpdateTime extends TimerTask{
     
         @Override
         public void run() {
-        System.out.println(new Date()); // this will be used by the GUI
+        System.out.println("Clock Tick: " + new Date()); // this will be used by the GUI
     }
 }
