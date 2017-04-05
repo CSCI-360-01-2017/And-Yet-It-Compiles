@@ -60,6 +60,10 @@ public class AlarmSystem {
         return alarmTwo;
     }
     
+    public Clock getClock(){
+        return clock;
+    }
+    
     // Cancel the alarm and set it forward 5 mins.
     public void snoozeAlarmOne(){
         Date timeBeforeSnooze = alarmOne.getTime2Sound();
