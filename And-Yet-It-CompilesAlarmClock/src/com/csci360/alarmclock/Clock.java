@@ -5,6 +5,7 @@
  */
 package com.csci360.alarmclock;
 import java.util.*;
+import javax.swing.JTextField;
 /**
  * This clock is used to keep track of time by displaying the time every second
  * taken from the Date class, using a timer to make the updates each second.
@@ -23,6 +24,7 @@ public class Clock {
         timer = new Timer();
         updateTime = new UpdateTime();
         timer.scheduleAtFixedRate(updateTime, 0, 1000);
+        //JTextField clockTextBox = AlarmGUI.getClockTextBox();
     }
     
     //TODO: add some functionality to allow for 12-hour mode.

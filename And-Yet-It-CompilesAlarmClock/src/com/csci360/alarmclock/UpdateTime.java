@@ -5,15 +5,16 @@
  */
 package com.csci360.alarmclock;
 import java.util.*;
+import javax.swing.JTextField;
 /**
  * This is a timertask that is used to print out the current clock time.
  * @author Josh Jettie and Nicholas Johnson
  */
 public class UpdateTime extends TimerTask{
     
+    
         @Override
         public void run() {
-        //System.out.println("Clock Tick: " + new Date()); // this will be used by the GUI
-        
+        System.out.println("Clock Tick: " + new Date()); // this will be used by the GUI
     }
 }
