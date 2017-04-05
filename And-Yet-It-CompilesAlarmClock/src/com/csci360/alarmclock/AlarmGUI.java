@@ -27,7 +27,6 @@ public class AlarmGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -40,13 +39,6 @@ public class AlarmGUI extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jToggleButton1.setText("SYSTEM ON/OFF");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
 
         jButton1.setText("Set Alarm One");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -117,8 +109,7 @@ public class AlarmGUI extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jToggleButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -137,9 +128,7 @@ public class AlarmGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jToggleButton1)
-                    .addComponent(jToggleButton2))
+                .addComponent(jToggleButton2)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -167,26 +156,6 @@ public class AlarmGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    // SYSTEM ON/OFF
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        AlarmSystem system = new AlarmSystem();
-        Date startupTime = new Date();
-        String timeFormated = startupTime.getHours() + ":" + startupTime.getMinutes()
-                + ":" + startupTime.getSeconds();
-        jTextField5.setText(timeFormated); 
-        
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask(){
-        @Override
-        public void run() {
-        Date updateTime = new Date();
-        String updateFormated = updateTime.getHours() + ":" + updateTime.getMinutes()
-                + ":" + updateTime.getSeconds();
-        jTextField5.setText(updateFormated); 
-                
-        }}, 0, 1000);
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -246,13 +215,11 @@ public class AlarmGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AlarmGUI().setVisible(true);
+               new AlarmGUI().setVisible(true);
+                
+               AlarmSystem system = new AlarmSystem(jTextField5);
             }
         });
-    }
-    
-    public javax.swing.JTextField getClockTextBox(){
-        return jTextField5;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -264,8 +231,7 @@ public class AlarmGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JToggleButton jToggleButton1;
+    public static javax.swing.JTextField jTextField5;
     private javax.swing.JToggleButton jToggleButton2;
     // End of variables declaration//GEN-END:variables
 }

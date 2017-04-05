@@ -18,8 +18,12 @@ public class AlarmSystem {
     private Alarm alarmOne;
     private Alarm alarmTwo;
     private Radio radio = new Radio();
-    private Clock clock = new Clock();
+    private Clock clock;
     private int volume;
+    
+    AlarmSystem(javax.swing.JTextField field5){
+        clock = new Clock(field5);
+    }
     
     public void setVolume(int newVolume){
         volume = newVolume;

@@ -20,11 +20,10 @@ public class Clock {
     /**
      * Constructor initializes the timer the moment it is constructed.
      */
-    Clock(){
+    Clock(javax.swing.JTextField field5){
         timer = new Timer();
-        updateTime = new UpdateTime();
+        updateTime = new UpdateTime(field5);
         timer.scheduleAtFixedRate(updateTime, 0, 1000);
-        //JTextField clockTextBox = AlarmGUI.getClockTextBox();
     }
     
     //TODO: add some functionality to allow for 12-hour mode.
