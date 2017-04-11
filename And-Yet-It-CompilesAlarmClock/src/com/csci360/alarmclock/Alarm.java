@@ -20,11 +20,11 @@ public class Alarm {
      * Constructor takes the mode (true = buzz, false = radio) and the time
      * to sound as a Date.
      */
-    Alarm(boolean setMode, Date time){
+    Alarm(boolean setMode, Date time, javax.swing.JTextField field3){
         alarm = new Timer();
         mode = setMode;
         time2Sound = time;
-        soundAlarm = new SoundAlarm(setMode);
+        soundAlarm = new SoundAlarm(setMode, field3);
         alarm.schedule(soundAlarm, time);
     }
  

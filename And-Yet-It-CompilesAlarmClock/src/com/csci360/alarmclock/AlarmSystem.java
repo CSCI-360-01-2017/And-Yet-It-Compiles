@@ -33,12 +33,12 @@ public class AlarmSystem {
         return volume;
     }
     
-    public void setAlarmOne(boolean mode, Date time){
-        alarmOne = new Alarm(mode, time);
+    public void setAlarmOne(boolean mode, Date time, javax.swing.JTextField field3){
+        alarmOne = new Alarm(mode, time, field3);
     }
     
-    public void setAlarmTwo(boolean mode, Date time){
-        alarmTwo = new Alarm(mode, time);
+    public void setAlarmTwo(boolean mode, Date time, javax.swing.JTextField field3){
+        alarmTwo = new Alarm(mode, time, field3);
     }
     
     public void changeStation(float frequency){
@@ -69,9 +69,16 @@ public class AlarmSystem {
     }
     
     // Cancel the alarm and set it forward 5 mins.
-    public void snoozeAlarmOne(){
-        Date timeBeforeSnooze = alarmOne.getTime2Sound();
-        timeBeforeSnooze.setMinutes(timeBeforeSnooze.getMinutes() + SNOOZE_MINS);
-        alarmOne = new Alarm(alarmOne.getMode(), timeBeforeSnooze);
+    public void snoozeAlarmOne(javax.swing.JTextField field3){
+        Date timeOfSnooze = new Date();
+        timeOfSnooze.setMinutes(timeOfSnooze.getMinutes() + SNOOZE_MINS);
+        alarmOne = new Alarm(alarmOne.getMode(), timeOfSnooze, field3);
+    }
+    
+    // Cancel the alarm and set it forward 5 mins.
+    public void snoozeAlarmTwo(javax.swing.JTextField field3){
+        Date timeOfSnooze = new Date();
+        timeOfSnooze.setMinutes(timeOfSnooze.getMinutes() + SNOOZE_MINS);
+        alarmTwo = new Alarm(alarmTwo.getMode(), timeOfSnooze, field3);
     }
 }

@@ -13,21 +13,27 @@ import java.util.*;
 public class SoundAlarm extends TimerTask{
     
     private boolean mode; // False means radio and True means Buzz
+    private javax.swing.JTextField displayField;
     
     /**
      * Constructor that sets the mode
      * @param setMode 
      */
-    SoundAlarm(boolean setMode){
+    SoundAlarm(boolean setMode, javax.swing.JTextField field3){
         mode = setMode;
+        displayField = field3;
     }
     
     @Override
     public void run() {
         if (this.mode){
             System.out.println("Buzz at:"+new Date());
+            
+            displayField.setText("Buzzing...");
         }else{
             System.out.println("Radio is playing at:"+new Date());
+            
+            displayField.setText("Radio is playing...");
         }
     }
 
