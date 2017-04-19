@@ -42,10 +42,7 @@ public class AlarmSystem {
     }
     
     public void changeStation(float frequency){
-        
-        if(frequency > 88.0 && frequency < 106.0){
         radio.setStation(frequency);
-        }
     }
     
     public void radioOnOrOff(boolean onOrOff){ // True = on False = off.
@@ -67,6 +64,10 @@ public class AlarmSystem {
     public Clock getClock(){
         return clock;
     }
+    public Radio getRadio(){
+        return radio;
+    }
+    
     
     // Cancel the alarm and set it forward 5 mins.
     public void snoozeAlarmOne(javax.swing.JTextField field3){
